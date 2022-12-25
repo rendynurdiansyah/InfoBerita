@@ -1,0 +1,37 @@
+{% extends 'front/base.html' %}
+{% load static %}
+{% block content %}
+<div class="wrapper">
+    <div class="parallax filter-black">
+        <div class="parallax-image">
+            <img src="{% static 'front/img/download.png' %}" alt="..." />
+        </div>
+        <div class="small-info">
+            <h1>Detail artikel</h1>
+            <h3></h3>
+        </div>
+    </div>
+    <div class="section section-description">
+        <div class="container">
+             <div class="row">
+                <div class="col-md-6">
+                   <div class="img-container">
+                   </div>
+                </div>
+                <div class="col-md-8">
+                    <h5>{{artikel.kategori}}</h5><hr>
+                    <p>{{artikel.judul}}</p>
+                    </p>{{artikel.body|safe }}</p>
+                    </p>{{a.date}}</p>
+                    <a class="btn btn-primary btn-round btn-sm" href="{%url 'artikel' %}">Back</a>
+                </div>
+                
+            </div>
+        </div>
+      </div>
+</div>
+ <div class="space-90"></div>
+
+{% endblock content %}
+
+

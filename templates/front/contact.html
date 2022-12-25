@@ -1,0 +1,196 @@
+{% extends 'front/base.html' %}
+{% load static %}
+{% block content %}
+<body class="contact-us">
+<div class="wrapper">
+    <div class="parallax bg-black">
+        <div class="company-description bg-black">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6812286292966!2d117.13670651445811!3d-0.4749718996534613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df67f21b115fd67%3A0x108077d433712165!2sUniversitas%20Muhammadiyah%20Kalimantan%20Timur%20Samarinda!5e0!3m2!1sid!2sid!4v1671246377135!5m2!1sid!2sid" width="1700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+    </div>
+
+    <div class="section">
+           <div class="container">
+               <h2 class="section-title">Send us a message</h2>
+               <div class="row">
+                   <div class="col-md-6">
+                       <p>
+                           You can contact us with anything related to our Products. We'll get in touch with you as soon as possible.<br><br>
+                        </p>
+                        <form role="form" id="contact-form" method="post">
+    						<div class="form-group">
+    				    		<label for="name">Your name</label>
+    				    		<input type="text" name="name" class="form-control" id="name" placeholder="First Name and Last Name"/>
+    				  		</div>
+    				  		<div class="form-group">
+    				    		<label for="email">Email address</label>
+    				    		<input type="email" name="email" class="form-control" id="email" placeholder="Your personal email address"/>
+    				  		</div>
+    				  		<div class="form-group">
+    				    		<label for="phone">Phone</label>
+    				    		<input type="text" name="phone" class="form-control" id="phone" placeholder="Phone number"/>
+    				  		</div>
+    				  		<div class="form-group">
+    				    		<label for="message">Your message</label>
+    				    		<textarea name="message" class="form-control" id="message" rows="6"></textarea>
+    				  		</div>
+    				  		<div class="submit">
+    				  			<input type="submit" class="btn btn-info btn-fill" value="Contact Us" />
+    				  		</div>
+    					</form>
+                   </div>
+                   <div class="col-md-4 col-md-offset-2">
+                        <div class="contact-info">
+                            <h5><i class="fa fa-map-marker text-muted"></i> Address</h5>
+                            <p class="text-muted"> Jalan awsyahranie gg.polder 2,<br>
+                                7711 samarinda,<br>
+                                kalimantan timur
+                            </p><br>
+                            <h5><i class="fa fa-phone text-muted"></i> Live Support</h5>
+                            <p class="text-muted"> Anggiq Karisma Aji Restu<br>
+                                081264831299<br>
+                                Mon - Fri, 8:00-22:00
+                            </p><br>
+                            <h5><i class="fa fa-building text-muted"></i> Business Info</h5>
+                            <p class="text-muted"> Creative Tim Ltd.<br>
+                                VAT &middot; EN2341241<br>
+                                IBAN &middot; EN8732ENGB2300099123<br>
+                                Bank &middot; Great Britain Bank
+                            </p>
+                        </div>
+                   </div>
+               </div>
+           </div>
+    </div><!-- section -->
+    <div class="space-50"></div>
+    
+    <footer class="footer footer-big footer-black">
+        <!-- .footer-black is another class for the footer, for the transparent version, we recommend you to change the url of the image with your favourite image.          -->
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <h5 class="title">Company</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#" >
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                   Find offers
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Discover Projects
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Our Portfolio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    About Us
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <h5 class="title"> Help and Support</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                   Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                   How it works
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Company Policy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                   Money Back
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="title">Follow us on</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#" class="btn btn-social btn-facebook btn-simple">
+                                    <i class="fa fa-facebook-square"></i> Facebook
+                                </a>
+                            </li>
+                             <li>
+                                 <a href="#" class="btn btn-social btn-dribbble btn-simple">
+                                    <i class="fa fa-dribbble"></i> Dribbble
+                                </a>
+                            </li>
+                            <li>
+                               <a href="#" class="btn btn-social btn-twitter btn-simple">
+                                    <i class="fa fa-twitter"></i> Twitter
+                                </a>
+                            </li>
+                            <li>
+                                 <a href="#" class="btn btn-social btn-reddit btn-simple">
+                                    <i class="fa fa-google-plus-square"></i> Google+
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </nav>
+                </div>
+
+                 <div class="col-md-3">
+                    <h5 class="title">Latest News</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#" >
+                                   <i class="fa fa-twitter"></i> <b>Get Shit Done</b>
+                                   The best kit in the market is here, just give it a try and let us...
+                                   <hr class="hr-small">
+                                </a>
+                            </li>
+                            <li>
+                                  <a href="#" >
+                                   <i class="fa fa-twitter"></i>
+                                   We've just been featured on <b> Awwwards Website</b>! Thank you everybody for...
+                                </a>
+                            </li>
+                          
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+            <hr />
+            <div class="copyright">
+                &copy; 2016 Creative Tim, made with love
+            </div>
+        </div>
+    </footer>    
+    
+</div> <!-- wrapper --> 
+{% endblock content %}

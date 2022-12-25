@@ -1,0 +1,59 @@
+{% extends 'front/base.html' %}
+{% load static %}
+{% block content %}
+<div class="wrapper">
+    <div class="parallax filter-black">
+        <div class="parallax-image">
+            <img src="{% static 'front/img/news.jpg' %}" alt="..." />
+        </div>
+        <div class="small-info">
+            <h1>Artikel</h1>
+            <h3></h3>
+        </div>
+    </div>
+   
+    {% for a in artikel  %}
+    <div class="section section-description">
+        <div class="container">
+             <div class="row">
+                <div class="col-md-6">
+                   <div class="img-container">
+                   </div>
+                </div>
+                <div class="col-md-8">
+                    <h5>{{a.kategori}}</h5><hr>
+                    <p>{{a.judul}}</p>
+                    </p>{{a.body|safe|truncatechars:150 }}</p>
+                    </p>{{a.date}}</p>
+                    <a class="btn btn-primary btn-round btn-sm" href="{%url 'detail_artikel' a.id %}"> Read more</a>
+                </div>
+                
+            </div>
+        </div>
+      </div>
+</div>
+ <div class="space-90"></div>
+    {% endfor %}
+    
+{% if artikel.has_other_pages %}
+    <ul class="pagination container">
+      {% if artikel.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page={{ artikel.previous_page_number }}">&laquo;</a></li>
+      {% else %}
+        <li class="page-link"><span>&laquo;</span></li>
+      {% endif %}
+      {% for i in artikel.paginator.page_range %}
+        {% if artikel.number == i %}
+          <li class="page-link"><span>{{ i }} <span class="sr-only"></span></span></li>
+        {% else %}
+          <li class="page-link"><a href="?page={{ i }}">{{ i }}</a></li>
+        {% endif %}
+      {% endfor %}
+      {% if artikel.has_next %}
+        <li class="page-link"><a href="?page={{ artikel.next_page_number }}">&raquo;</a></li>
+      {% else %}
+        <li class="page-link"><span>&raquo;</span></li>
+      {% endif %}
+    </ul>
+  {% endif %} 
+{% endblock content %}

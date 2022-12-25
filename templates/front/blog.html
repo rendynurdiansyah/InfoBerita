@@ -1,0 +1,146 @@
+{% extends 'front/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="wrapper">
+    <div class="parallax filter-black">
+        <div class="parallax-image">
+            <img src="{% static 'front/img/koran.jpg'%}" alt="..." />
+        </div>
+        <div class="small-info">
+            <h1>Info seputar berita terkini</h1>
+            <h3></h3>
+        </div>
+    </div>
+    <div class="section">
+           <div class="container">
+               <h2 class="section-title"></h2>
+               <div class="row">
+                   {% for title, link,konten,date,i in mylist %}
+                    <div class="col-md-4">
+                        <div class="card card-plain">
+                            <div class="image">
+                                <img src="{{i.small}}" alt="..." />
+                                <div class="filter filter-white">
+                                    <a href={{link}} type="button" class="btn btn-info btn-round btn-fill">
+                                        <i class="fa fa-heart"></i> Readmore
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <p class="category">{{date}}</p>
+                                <a class="card-link" href="#">
+                                    <h4 class="title">{{title}}</h4>
+                                </a>
+                                 <div class="footer">
+                                    <div class="author">
+                                        <a class="card-link" href="#">
+                                           <img src="{% static 'front/img/default-avatar.png' %}" alt="..." class="avatar">
+                                           <span> {{user}} </span>
+                                        </a>
+                                    </div>
+                                    <div class="stats pull-right">
+                                        <i class="fa fa-clock-o"></i> 7 min read
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end card -->
+                    </div>
+                    {% endfor %}
+               </div>
+           </div>
+    </div><!-- section -->
+    <footer class="footer footer-big footer-transparent" style="background-image: url('{% static 'front/img/thumb.jpg' %});">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <h5 class="title">Company</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#" >
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                   Find offers
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Discover Projects
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Our Portfolio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    About Us
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <h5 class="title"> Help and Support</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                   Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                   How it works
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Company Policy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                   Money Back
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="title">Follow us on</h5>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#" class="btn btn-social btn-facebook btn-simple">
+                                    <i class="fa fa-facebook-square"></i> Facebook
+                                </a>
+                            </li>
+                            <li>
+                               <a href="https://instagram.com/anggiqkarisma?igshid=ZDdkNTZiNTM=" class="btn btn-social btn-twitter btn-simple">
+                                    <i class="fa fa-instagram"></i> Instagram
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>               
+            </div>
+            <hr />
+            <div class="copyright">
+                &copy; By ANGGIQ KARISMA AJI RESTU
+            </div>
+        </div>
+    </footer>
+</div> <!-- wrapper -->
+{% endblock content %}

@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <meta name="author" content="Creative Tim">
+  <title></title>
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'back/img/brand/favicon.png' %}" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="{% static 'back/vendor/nucleo/css/nucleo.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'back/vendor/@fortawesome/fontawesome-free/css/all.min.css' %}" type="text/css">
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="{% static 'back/css/argon.css'%}?v=1.2.1" type="text/css">
+</head>
+
+<body class="bg-default">
+  <!-- Navbar -->
+  <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+  </nav>
+  <!-- Main content -->
+  <div class="main-content">
+    <!-- Header -->
+    <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
+      <div class="container">
+        <div class="header-body text-center mb-7">
+          <div class="row justify-content-center">
+            <div class="col-xl-5 col-lg-6 col-md-8 px-5">
+              <h1 class="text-white"></h1>
+              <p class="text-lead text-white"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container mt--8 pb-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-7">
+          <div class="card bg-secondary border-0 mb-0">
+            <div class="card-body px-lg-5 py-lg-5">
+              <div class="text-center text-muted mb-4">
+                <h1>Silahkan Registrasi</h1>
+              </div>
+              <form method="POST">
+                {% csrf_token %}
+                <label> username </label>
+                <div class="form-group">
+                  <input class="form-control no-border" name="username"   placeholder="" type="text">
+                </div>
+                <label> Password </label>
+                <div class="form-group">
+                  <input class="form-control no-border" name="password"   placeholder="" type="password">
+                </div>
+                <label> Nama Depan </label>
+                <div class="form-group">
+                  <input class="form-control no-border" name="nama_depan"   placeholder="" type="text">
+                </div>
+                <label> Nama Belakang </label>
+                <div class="form-group">
+                  <input class="form-control no-border" name="nama_belakang"   placeholder="" type="text">
+                </div>
+                <label> Email </label>
+                <div class="form-group">
+                  <input class="form-control no-border" name="email"  placeholder="" type="email">
+                </div>
+                <label> alamat </label>
+                <div class="form-group">
+                  <textarea class="form-control no-border" name="alamat" id="" cols="30" rows="15"></textarea>
+                </div>
+                <label> Nomor Telephone </label>
+                <div class="form-group">
+                  <input class="form-control no-border" name="telp" placeholder="" type="text">
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary my-4">Registrasi</button>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-6">
+                    <a  class="btn btn-dark" href="{% url 'login' %}">
+                      <i class="bi bi-arrow-left-square-fill">  kembali</i>
+                    </a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="py-5" id="footer-main">
+    <div class="container">
+      <div class="row align-items-center justify-content-xl-between">
+      </div>
+    </div>
+  </footer>
+</body>
+  <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="{% static 'back/vendor/jquery/dist/jquery.min.js' %}"></script>
+  <script src="{% static 'back/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'back/vendor/js-cookie/js.cookie.js' %}"></script>
+  <script src="{% static 'back/vendor/jquery.scrollbar/jquery.scrollbar.min.js' %}"></script>
+  <script src="{% static 'back/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js' %}"></script>
+  <!-- Argon JS -->
+  <script src="{% static 'back/js/argon.js' %}?v=1.2.1"></script>
+  <!-- Demo JS - remove this in your project -->
+  <script src="{% static 'back/js/demo.min.js' %}"></script>
+
+</html>
+
